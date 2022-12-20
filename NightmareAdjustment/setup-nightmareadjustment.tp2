@@ -1,0 +1,56 @@
+BACKUP ~NightmareAdjustment/Backup~ // So WeiDU can uninstall
+AUTHOR ~Dracoqwerty~
+README ~NightmareAdjustment/readme.txt~ // Shows readme file
+VERSION ~1.0~
+LANGUAGE ~English~ ~english~ ~NightmareAdjustment/lang/english/NightmareAdjustment.tra~
+BEGIN @1
+	INCLUDE ~NightmareAdjustment/lib/functions.tph~   // Borrowed from Argent77 for dynamic animtion slot search code
+	INCLUDE ~NightmareAdjustment/lib/handle_charsets.tpa~   // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
+	ACTION_IF (GAME_IS ~soa tob bgt bgee bg2ee eet iwdee~) THEN BEGIN
+		// 2da files
+		COPY ~NightmareAdjustment/2da/CLABUB!D.2da~ ~override~
+	
+		// items
+		COPY ~NightmareAdjustment/itm/d8_nmlv1.itm~ ~override~
+			WRITE_LONG NAME1 RESOLVE_STR_REF (@3) // unidentified name for itm OR spell name
+  	 		WRITE_LONG NAME2 RESOLVE_STR_REF (@3) // unidentified name for itm OR spell name
+  			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@8) // unidentified description for itm, spell description for spells	
+ 	 		WRITE_LONG IDENTIFIED_DESC RESOLVE_STR_REF (@8) // identified description for itm, spell description for spells
+		COPY ~NightmareAdjustment/itm/d8_nmlv2.itm~ ~override~
+			WRITE_LONG NAME1 RESOLVE_STR_REF (@4) // unidentified name for itm OR spell name
+  	 		WRITE_LONG NAME2 RESOLVE_STR_REF (@4) // unidentified name for itm OR spell name
+  			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@8) // unidentified description for itm, spell description for spells	
+ 	 		WRITE_LONG IDENTIFIED_DESC RESOLVE_STR_REF (@8) // identified description for itm, spell description for spells
+		COPY ~NightmareAdjustment/itm/d8_nmlv3.itm~ ~override~
+			WRITE_LONG NAME1 RESOLVE_STR_REF (@5) // unidentified name for itm OR spell name
+  	 		WRITE_LONG NAME2 RESOLVE_STR_REF (@5) // unidentified name for itm OR spell name
+  			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@8) // unidentified description for itm, spell description for spells	
+ 	 		WRITE_LONG IDENTIFIED_DESC RESOLVE_STR_REF (@8) // identified description for itm, spell description for spells
+		COPY ~NightmareAdjustment/itm/d8_nmlv4.itm~ ~override~
+			WRITE_LONG NAME1 RESOLVE_STR_REF (@6) // unidentified name for itm OR spell name
+  	 		WRITE_LONG NAME2 RESOLVE_STR_REF (@6) // unidentified name for itm OR spell name
+  			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@8) // unidentified description for itm, spell description for spells	
+ 	 		WRITE_LONG IDENTIFIED_DESC RESOLVE_STR_REF (@8) // identified description for itm, spell description for spells
+		COPY ~NightmareAdjustment/itm/d8_nmlve.itm~ ~override~
+			WRITE_LONG NAME1 RESOLVE_STR_REF (@7) // unidentified name for itm OR spell name
+  	 		WRITE_LONG NAME2 RESOLVE_STR_REF (@7) // unidentified name for itm OR spell name
+  			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@8) // unidentified description for itm, spell description for spells	
+ 	 		WRITE_LONG IDENTIFIED_DESC RESOLVE_STR_REF (@8) // identified description for itm, spell description for spells
+		
+		// spells
+		COPY "NightmareAdjustment/spl/d8_nmlv1.spl" "override"
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
+		COPY "NightmareAdjustment/spl/d8_nmlv2.spl" "override"
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
+		COPY "NightmareAdjustment/spl/d8_nmlv3.spl" "override"
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
+		COPY "NightmareAdjustment/spl/d8_nmlv4.spl" "override"
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
+		COPY "NightmareAdjustment/spl/d8_nmlve.spl" "override"
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl                                                          
+END

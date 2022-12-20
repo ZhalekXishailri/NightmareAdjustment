@@ -42,15 +42,15 @@ BEGIN @1
    			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
    			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
 		COPY "NightmareAdjustment/spl/d8_nmlv2.spl" "override"
-   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@10) // unidentified name for itm OR spell name
    			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
 		COPY "NightmareAdjustment/spl/d8_nmlv3.spl" "override"
-   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@11) // unidentified name for itm OR spell name
    			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
 		COPY "NightmareAdjustment/spl/d8_nmlv4.spl" "override"
-   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@12) // unidentified name for itm OR spell name
    			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl
 		COPY "NightmareAdjustment/spl/d8_nmlve.spl" "override"
-   			WRITE_LONG NAME1 RESOLVE_STR_REF (@2) // unidentified name for itm OR spell name
+   			WRITE_LONG NAME1 RESOLVE_STR_REF (@13) // unidentified name for itm OR spell name
    			WRITE_LONG UNIDENTIFIED_DESC RESOLVE_STR_REF (@9) // unidentified description for itm, spell description for spl                                                          
 END
